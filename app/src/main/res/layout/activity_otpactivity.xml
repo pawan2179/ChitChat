@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".OTPActivity"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/verifyTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Verify +91 1234567899"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"/>
+
+        <TextView
+            android:id="@+id/waitingForOTPtv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Waiting to automatically detect an SMS sent to your number"
+            android:textSize="16sp"
+            android:padding="4dp"
+            android:textAlignment="center"
+            android:layout_marginTop="24dp"/>
+
+        <TextView
+            android:id="@+id/counterTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            tools:text = "00:30 secs"
+            android:textAlignment="center"
+            android:padding="4dp"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/otpEt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:padding="12dp"
+            android:layout_marginTop="48dp"
+            android:maxLength="6"
+            android:hint="------"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:letterSpacing="0.8"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter 6-digit code"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sendVerificationCodeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SEND VERIFICATION CODE"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            app:cornerRadius="32dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/resendVerificationCodeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RESEND CODE"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            app:cornerRadius="32dp"
+            android:enabled="false"/>
+
+
+    </LinearLayout>
+
+</layout>
